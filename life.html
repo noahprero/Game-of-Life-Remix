@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life</title>
+    <link rel="stylesheet" href="life.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+    </div>
+    <div class="menu-container">
+      <div class="button-container">
+        <button class="start button" onclick="runSim(true)" id="start">START</button>
+        <button class="clear button" onclick="clearBoard()" id="clearstop">CLEAR</button>
+        <button class="next button" onclick="runSim(false)" id="next">NEXT</button>
+        <button class="load button">LOAD</button>
+        <button class="random button" onclick="randomBoard(250)">RAND</button>
+        <button class="gravity button" onclick="runGravity()" id="gravity">GRAVITY</button>
+      </div>
+  
+      <div class="stats-container">
+        <div class="speed-controls">
+          <button class="speed-button faster" onclick="faster()">+</button>
+          <button class="speed-button slower" onclick="slower()">-</button>
+        </div>
+  
+        <div class="stats">
+          <div class="generations">GEN: 0</div>
+          <div class="speed"></div>
+          <div class="alive-count">ALIVE: 0</div>
+          <div class="trapper-count">TRAPPERS: 0</div>
+        </div>
+      </div>
+    </div>
+    <div class="color-selector-container">
+      <div class="color-selector">
+        <div class="color black" onclick="setColor('#000000')"></div>
+        <div class="color green" onclick="setColor('#008000')"></div>
+        <div class="color purple" onclick="setColor('#8d00ce')"></div>
+        <div class="color blue" onclick="setColor('#0000FF')"></div>
+        <div class="color red" onclick="setColor('#FF0000')"></div>
+      </div>
+    </div>
+  </body>
+</html>
